@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fortnite Roulette</string>
+    <string name="info_txt">Please select the challenges you would like to have on.</string>
 </resources>
