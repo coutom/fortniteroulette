@@ -2,6 +2,9 @@ package com.example.fortniteroulette;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class Roll extends AppCompatActivity {
 
@@ -13,6 +16,14 @@ public class Roll extends AppCompatActivity {
     private boolean specBoo = true;
     private String dNum;
     private String dLet;
+
+    private TextView weaponText;
+    private TextView healText;
+    private TextView dropText;
+    private TextView trapText;
+    private TextView buildText;
+    private TextView specText;
+
 
     private String[] weaponList = new String[] {"Pistols Only", "No Pistols", "Sub Machine Guns Only", "No Sub Machine Guns", "Shotguns Only", "No Shotguns", "Assault Riffles Only",
             "No Assault Riffles", "Snipers Only", "No Snipers", "Splodes Only", "No Splodes", "Grenades Only", "No Grenades", "Uncommon Only", "No Uncommon", "Common Only", "No Uncommon",
@@ -33,24 +44,65 @@ public class Roll extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roll);
 
-        if(wepBoo) {//pick random weapon text and show it
+        weaponText = (TextView) findViewById(R.id.weapons_txt2);
+        healText = (TextView) findViewById(R.id.healing_txt2);
+        dropText = (TextView) findViewById(R.id.dropzone_txt2);
+        trapText = (TextView) findViewById(R.id.traps_txt2);
+        buildText = (TextView) findViewById(R.id.building_txt2);
+        specText = (TextView) findViewById(R.id.special_txt2);
+
+        if(wepBoo) {
+            //pick random weapon text and show it
+            Random random = new Random();
+            String weapon = weaponList[random.nextInt(weaponList.length)];
+            weaponText.setText(weaponText.getText() + " " + weapon);
         }
-        if(healBoo) {//pick random healing text and show it
+
+        if(healBoo) {
+            //pick random healing text and show it
+            Random random = new Random();
+            String heal = healingList[random.nextInt(healingList.length)];
+            healText.setText(healText.getText() + " " + heal);
         }
-        if(dropBoo) {//pick random drop zone text and show it
+
+        if(dropBoo) {
+            //pick random drop zone text and show it
+            String drop = getDropzone();
+            dropText.setText(healText.getText() + " " + drop);
         }
-        if(trapBoo) {//pick a random trap text and show it
+
+        if(trapBoo) {
+            //pick a random trap text and show it
+            Random random = new Random();
+            String trap = trapList[random.nextInt(trapList.length)];
+            trapText.setText(trapText.getText() + " " + trap);
         }
-        if(buildBoo) {//pick a random building text and show it
+
+        if(buildBoo) {
+            //pick a random building text and show it
+            Random random = new Random();
+            String build = buildingList[random.nextInt(buildingList.length)];
+            buildText.setText(buildText.getText() + " " + build);
         }
-        if(specBoo) {//pick a random special text and show it
+
+        if(specBoo) {
+            //pick a random special text and show it
+            Random random = new Random();
+            String spec = specialList[random.nextInt(specialList.length)];
+            specText.setText(specText.getText() + " " + spec);
         }
 
     }
 
     public String getDropzone() {
         //gets a random letter and a random number concats them and returns the string
-        return null;
+
+        Random random = new Random();
+        int rand = random.nextInt(9);
+        int rand2 = random.nextInt(9);
+        dNum = dropzoneNumberList[rand];
+        dLet = dropzoneLetterList[rand2];
+        return dNum + dLet;
     }
 
 }
