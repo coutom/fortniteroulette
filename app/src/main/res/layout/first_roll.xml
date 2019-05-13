@@ -85,14 +85,15 @@
         android:layout_below="@+id/building_txt"/>
 
 
-    <Button
+    <ImageButton
         android:id="@+id/roll_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/special_txt"
         android:layout_marginTop="20dp"
-        android:text="Roll"/>
+        android:src="@mipmap/roll_first_roll"
+        />
 
     <TextView
         android:layout_width="wrap_content"
