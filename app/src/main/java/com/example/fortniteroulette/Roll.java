@@ -2,6 +2,8 @@ package com.example.fortniteroulette;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -23,6 +25,8 @@ public class Roll extends AppCompatActivity {
     private TextView trapText;
     private TextView buildText;
     private TextView specText;
+
+    ImageButton roll2;
 
 
     private String[] weaponList = new String[] {"Pistols Only", "No Pistols", "Sub Machine Guns Only", "No Sub Machine Guns", "Shotguns Only", "No Shotguns", "Assault Riffles Only",
@@ -50,7 +54,32 @@ public class Roll extends AppCompatActivity {
         trapText = (TextView) findViewById(R.id.traps_txt2);
         buildText = (TextView) findViewById(R.id.building_txt2);
         specText = (TextView) findViewById(R.id.special_txt2);
+        roll2 = (ImageButton) findViewById(R.id.roll_btn2);
 
+        roll2.setBackgroundResource(0);
+        setValues();
+
+        roll2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setValues();
+            }
+        });
+
+    }
+
+    public String getDropzone() {
+        //gets a random letter and a random number concats them and returns the string
+
+        Random random = new Random();
+        int rand = random.nextInt(9);
+        int rand2 = random.nextInt(9);
+        dNum = dropzoneNumberList[rand];
+        dLet = dropzoneLetterList[rand2];
+        return dNum + dLet;
+    }
+
+    public void setValues() {
         if(wepBoo) {
             //pick random weapon text and show it
             Random random = new Random();
@@ -91,18 +120,6 @@ public class Roll extends AppCompatActivity {
             String spec = specialList[random.nextInt(specialList.length)];
             specText.setText(specText.getText() + " " + spec);
         }
-
-    }
-
-    public String getDropzone() {
-        //gets a random letter and a random number concats them and returns the string
-
-        Random random = new Random();
-        int rand = random.nextInt(9);
-        int rand2 = random.nextInt(9);
-        dNum = dropzoneNumberList[rand];
-        dLet = dropzoneLetterList[rand2];
-        return dNum + dLet;
     }
 
 }

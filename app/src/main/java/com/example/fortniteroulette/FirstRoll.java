@@ -16,6 +16,7 @@ public class FirstRoll extends AppCompatActivity {
         setContentView(R.layout.first_roll);
 
         roll = (ImageButton) findViewById(R.id.roll_btn);
+        roll.setBackgroundResource(0);
 
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
