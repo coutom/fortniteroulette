@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6663849184001520~6055836060"/>
+
         <activity android:name=".FirstRoll" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity android:name=".Roll"  android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Splash" android:theme="@style/Theme.AppCompat.NoActionBar">

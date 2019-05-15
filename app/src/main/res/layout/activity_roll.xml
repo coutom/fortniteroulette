@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,15 +9,17 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/traps_txt2"
+        <com.hanks.htextview.evaporate.EvaporateTextView
+
+            android:id="@+id/traps_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
@@ -28,7 +30,7 @@
                 android:textColor="#fef65b"
                 android:textSize="20sp" />
 
-            <TextView
+            <com.hanks.htextview.evaporate.EvaporateTextView
                 android:id="@+id/special_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,7 +42,7 @@
                 android:textColor="#fef65b"
                 android:textSize="20sp" />
 
-            <TextView
+            <com.hanks.htextview.evaporate.EvaporateTextView
                 android:id="@+id/weapons_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +54,7 @@
                 android:textColor="#fef65b"
                 android:textSize="20sp" />
 
-            <TextView
+            <com.hanks.htextview.evaporate.EvaporateTextView
                 android:id="@+id/dropzone_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +66,7 @@
                 android:textColor="#fef65b"
                 android:textSize="20sp" />
 
-            <TextView
+            <com.hanks.htextview.evaporate.EvaporateTextView
                 android:id="@+id/healing_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +78,7 @@
                 android:textColor="#fef65b"
                 android:textSize="20sp" />
 
-            <TextView
+            <com.hanks.htextview.evaporate.EvaporateTextView
                 android:id="@+id/building_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,5 +104,16 @@
         </LinearLayout>
     </ScrollView>
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6663849184001520/3984206492"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
