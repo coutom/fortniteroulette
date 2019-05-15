@@ -22,11 +22,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Traps:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/special_txt2"
@@ -34,23 +34,23 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Special:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/weapons_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Weapons:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/dropzone_txt2"
@@ -58,11 +58,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Drop Zone:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/healing_txt2"
@@ -70,11 +70,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Healing:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/building_txt2"
@@ -82,11 +82,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fortnite_font"
                 android:paddingLeft="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="Building:"
                 android:textColor="#fef65b"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <ImageButton
                 android:id="@+id/roll_btn2"

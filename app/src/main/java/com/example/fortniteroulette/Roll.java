@@ -84,41 +84,41 @@ public class Roll extends AppCompatActivity {
             //pick random weapon text and show it
             Random random = new Random();
             String weapon = weaponList[random.nextInt(weaponList.length)];
-            weaponText.setText(weaponText.getText() + " " + weapon);
+            weaponText.setText("Weapons: " + weapon);
         }
 
         if(healBoo) {
             //pick random healing text and show it
             Random random = new Random();
             String heal = healingList[random.nextInt(healingList.length)];
-            healText.setText(healText.getText() + " " + heal);
+            healText.setText("Healing: " + heal);
         }
 
         if(dropBoo) {
             //pick random drop zone text and show it
             String drop = getDropzone();
-            dropText.setText(healText.getText() + " " + drop);
+            dropText.setText("Healing: " + drop);
         }
 
         if(trapBoo) {
             //pick a random trap text and show it
             Random random = new Random();
             String trap = trapList[random.nextInt(trapList.length)];
-            trapText.setText(trapText.getText() + " " + trap);
+            trapText.setText("Traps: " + trap);
         }
 
         if(buildBoo) {
             //pick a random building text and show it
             Random random = new Random();
             String build = buildingList[random.nextInt(buildingList.length)];
-            buildText.setText(buildText.getText() + " " + build);
+            buildText.setText("Building: " + build);
         }
 
         if(specBoo) {
             //pick a random special text and show it
             Random random = new Random();
             String spec = specialList[random.nextInt(specialList.length)];
-            specText.setText(specText.getText() + " " + spec);
+            specText.setText("Special: " + spec);
         }
     }
 

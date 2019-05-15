@@ -1,112 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@mipmap/firstrollbg"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/firstrollbg"
     tools:context=".FirstRoll">
-
-    <TextView
-        android:id="@+id/weapons_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weapons:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:paddingBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/healing_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Healing:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/weapons_txt"/>
-
-    <TextView
-        android:id="@+id/dropzone_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Drop Zone:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/healing_txt"/>
-
-    <TextView
-        android:id="@+id/traps_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Traps:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/dropzone_txt"/>
-
-    <TextView
-        android:id="@+id/building_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Building:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/traps_txt"/>
-
-    <TextView
-        android:id="@+id/special_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Special:"
-        android:fontFamily="@font/fortnite_font"
-        android:textSize="35sp"
-        android:textColor="#fef65b"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/building_txt"/>
 
 
     <ImageButton
         android:id="@+id/roll_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/special_txt"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
         android:src="@mipmap/roll_first_roll"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_wrapHeight="159"
+        tools:layout_conversion_wrapWidth="283" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/roll_btn"
-        android:paddingLeft="10dp"
-        android:paddingTop="50dp"
-        android:text="@string/info_txt"
-        android:textColor="#fef65b"
-        android:textSize="25sp"
-        android:fontFamily="@font/fortnite_font"
-        android:textAlignment="center"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_wrapHeight="131"
+        tools:layout_conversion_wrapWidth="356" />
 
 
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
